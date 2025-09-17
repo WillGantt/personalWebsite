@@ -4,35 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projects - Will Gantt</title>
-    
-    <!-- Bootstrap CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../resources/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../resources/img/favicon.ico">
+
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="icon" type="image/x-icon" href="resources/img/favicon.ico">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="home.html">
+            <a class="navbar-brand fw-bold" href="index.html">
                 <i class="fas fa-code me-2"></i>Will Gantt
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">
+                        <a class="nav-link" href="index.html">
                             <i class="fas fa-home me-1"></i>Home
                         </a>
                     </li>
@@ -52,10 +45,9 @@
                         </a>
                     </li>
                 </ul>
-                
-                <!-- Profile Icon -->
+
                 <div class="ms-3">
-                    <a href="home.html" class="text-light">
+                    <a href="index.html" class="text-light">
                         <i class="fas fa-user-circle fa-2x"></i>
                     </a>
                 </div>
@@ -63,7 +55,6 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header bg-primary text-white py-5 mt-5">
         <div class="container">
             <div class="row">
@@ -77,13 +68,11 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section class="projects-section py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="accordion" id="projectsAccordion">
-                        <!-- Project 1: Personal Website -->
                         <div class="accordion-item mb-3">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -131,15 +120,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
+                        </div><!-- /accordion-item -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Showcase -->
     <section class="skills-showcase bg-light py-5">
         <div class="container">
             <div class="row">
@@ -181,7 +168,6 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
     <section class="cta-section py-5">
         <div class="container">
             <div class="row">
@@ -199,7 +185,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer unchanged -->
     <footer class="bg-dark text-light py-5">
         <div class="container">
             <div class="row">
@@ -233,12 +219,8 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <!-- Custom JS for animations -->
     <script>
-        // Add smooth scrolling for accordion items
         document.querySelectorAll('.accordion-button').forEach(button => {
             button.addEventListener('click', function() {
                 setTimeout(() => {
@@ -249,22 +231,17 @@
                 }, 300);
             });
         });
-
-        // Add animation to tech categories
         window.addEventListener('scroll', function() {
             const techCategories = document.querySelectorAll('.tech-category');
             techCategories.forEach(category => {
                 const categoryTop = category.getBoundingClientRect().top;
                 const categoryVisible = 150;
-                
                 if (categoryTop < window.innerHeight - categoryVisible) {
                     category.style.opacity = '1';
                     category.style.transform = 'translateY(0)';
                 }
             });
         });
-
-        // Initialize tech category animations
         document.addEventListener('DOMContentLoaded', function() {
             const techCategories = document.querySelectorAll('.tech-category');
             techCategories.forEach(category => {
